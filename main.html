@@ -1,105 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Dog Adoption Application</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f9fc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  form {
-    background: #fff;
-    padding: 25px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-  }
-  form h2 {
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
-  }
-  label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-    color: #555;
-  }
-  input[type="text"],
-  select {
-    width: 100%;
-    padding: 10px 12px;
-    margin-bottom: 18px;
-    border: 1.5px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border-color 0.2s ease;
-  }
-  input[type="text"]:focus,
-  select:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-  .checkbox-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 18px;
-  }
-  .checkbox-container input[type="checkbox"] {
-    margin-right: 10px;
-  }
-  button[type="submit"] {
-    width: 100%;
-    background-color: #007bff;
-    color: white;
-    padding: 12px 0;
-    border: none;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog Adoption Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f6fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background: #fff;
+      padding: 25px 35px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 350px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
+
   <form>
     <h2>Dog Adoption Application</h2>
-    
+
     <label for="name">Name</label>
-    <input id="name" name="name" type="text" placeholder="Name" required />
-    
+    <input type="text" id="name" placeholder="Name" name="name" required>
+
     <label for="phone">Phone Number</label>
-    <input id="phone" name="phone" type="text" placeholder="Phone Number" required />
-    
+    <input type="text" id="phone" placeholder="Phone Number" name="phone" required>
+
     <label for="address">Address</label>
-    <input id="address" name="address" type="text" placeholder="Address" required />
-    
-    <div class="checkbox-container">
-      <input id="dogBefore" name="dogBefore" type="checkbox" value="Have you ever lived with a Dog before?" />
-      <label for="dogBefore">Have you ever lived with a Dog before?</label>
-    </div>
-    
-    <label for="breeds">Please select your preferred breeds</label>
-    <select id="breeds" name="breeds" multiple size="3" required>
-      <option value="labrador">Labrador Retriever</option>
-      <option value="germanshepherd">German Shepherd</option>
-      <option value="goldenretriever">Golden Retriever</option>
-      <option value="bulldog">Bulldog</option>
-      <option value="beagle">Beagle</option>
+    <input type="text" id="address" placeholder="Address" name="address" required>
+
+    <label>
+      <input type="checkbox" id="checkbox" name="checkbox" value="Have you ever lived with a Dog before?">
+      Have you ever lived with a Dog before?
+    </label>
+
+    <label for="multiSelect">Please select your preferred breeds</label>
+    <select id="multiSelect" name="multiSelect" multiple required>
+      <option value="Labrador Retriever">Labrador Retriever</option>
+      <option value="German Shepherd">German Shepherd</option>
+      <option value="Golden Retriever">Golden Retriever</option>
+      <option value="Pug">Pug</option>
+      <option value="Beagle">Beagle</option>
     </select>
-    
-    <button type="submit">Submit</button>
+
+    <input type="submit" value="Submit">
   </form>
+
 </body>
 </html>
